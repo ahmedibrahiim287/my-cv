@@ -1,14 +1,3 @@
-/*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
-*/
-
-
 /* ---- Base Rules ---- */
 body {
     background: rgb(136, 203, 171);
@@ -87,7 +76,7 @@ section {
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-family: 'Cairo',
         sans-serif;
 }
@@ -144,8 +133,7 @@ section:nth-of-type(even) .landing__container {
 }
 
 /* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
-/* Circles appear to be random do to use of :nth-of-type psuedo class */
+
 section:nth-of-type(odd) .landing__container::before {
     content: '';
     background: rgba(255, 255, 255, 0.187);
@@ -206,7 +194,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
@@ -231,4 +218,172 @@ section.your-active-class .landing__container::after {
     to {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
+}
+
+/* new style  */
+
+.navbar {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    line-height: 80px;
+    font-size: 18px;
+    font-family: 'Cairo',
+        sans-serif;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a.navbar-brand {
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: 'Cairo',
+        sans-serif;
+}
+
+.navbar a.navbar-brand img {
+    width: 69px;
+    padding: 10px;
+    position: relative;
+    top: 7px;
+}
+
+.navbar ul {
+    float: right;
+    list-style: none;
+    height: inherit;
+    line-height: inherit;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    display: block;
+    text-align: center;
+    min-width: 120px;
+    padding: 0 30px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar .navbar-toggler {
+    display: none;
+}
+
+
+
+@media (max-width: 991px) {
+
+
+    .navbar ul li a {
+        min-width: 100px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar ul {
+        width: 100%;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 100vh;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .navbar ul.open {
+        max-height: 100vh;
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        padding: 0;
+    }
+
+    .navbar .navbar-toggler {
+        display: block;
+        position: absolute;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        color: #fff;
+        border: 3px solid #fff;
+        outline: none;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+
+    .navbar .navbar-toggler span,
+    .navbar .navbar-toggler span::before,
+    .navbar .navbar-toggler span::after {
+        display: block;
+        content: '';
+        background-color: #fff;
+        height: 3px;
+        width: 28px;
+        border-radius: 4px;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .navbar .navbar-toggler span::before {
+        transform: translateY(-8px);
+    }
+
+    .navbar .navbar-toggler span::after {
+        transform: translateY(5px);
+    }
+
+    .navbar .navbar-toggler.open-navbar-toggler span {
+        background-color: transparent;
+    }
+
+    .navbar .navbar-toggler.open-navbar-toggler span::before {
+        transform: translateY(0px) rotate(45deg);
+    }
+
+    .navbar .navbar-toggler.open-navbar-toggler span::after {
+        transform: translateY(-3px) rotate(-45deg);
+    }
+}
+
+
+.edLi {
+    list-style: none;
+    line-height: 2;
+    font-family: 'Cairo',
+        sans-serif;
+}
+
+.lihi {
+    line-height: 2;
+    font-family: 'Cairo',
+        sans-serif;
+}
+
+.liP {
+    font-family: 'Cairo',
+        sans-serif;
 }

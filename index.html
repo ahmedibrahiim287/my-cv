@@ -7,47 +7,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ahmed ibrahim cv</title>
   <link rel="icon" href="img/2.png" type="image/icon type">
-
   <!-- Load Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
   <!-- Load Styles -->
   <link href="css/styles.css" rel="stylesheet">
-  <link href="css/new-style.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
+  <!-- HTML sections -->
   <header class="page__header">
 
     <nav class="navbar navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <!-- Navigation -->
       <a href="#" class="navbar-brand"><img src="img/2.png"></a>
       <ul id="navbar__list">
-        <li><a href="#section1">Education</a></li>
-        <li><a href="#section2">Skills</a></li>
-        <li><a href="#section3">Work Experience</a></li>
-        <li><a href="#section4">Memberships</a></li>
-        <li><a href="#section5">Courses</a></li>
       </ul>
+
       <button class="navbar-toggler">
         <span></span>
       </button>
     </nav>
-
   </header>
   <main>
     <header class="main__hero">
       <h1>Ahmed ibrahim mohamed</h1>
 
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section0" data-nav="Section 0" class="your-active-class">
+    <!--Sections 1 -->
+    <section id="info" data-nav="info" class="your-active-class">
       <div class="landing__container">
         <h2>Personal Information</h2>
         <ul class="lihi">
@@ -58,18 +47,15 @@
           <li>Email: ahmedibrahim287@outlook.sa</li>
           <li>Gender: Male</li>
         </ul>
-        <p>
-
-
-        </p>
-
         <p class="liP">A fresh graduate. Passionate about Web development, specialized in front end development.
           Experienced with
           all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages
           including HTML, CSS, JavaScript, jQuery, Angular, and Node JS.</p>
       </div>
     </section>
-    <section id="section1" data-nav="Section 1" class="your-active-class">
+
+    <!--Sections 2 -->
+    <section id="Education" data-nav="Education">
       <div class="landing__container">
         <h2>Education</h2>
         <p class="liP">Bachelor in Business Information System (BIS) from Helwan University, Faculty of Commerce and
@@ -80,10 +66,11 @@
             <li class="edLi"> <strong>Graduated in</strong>: 2019.</li>
           </ul>
         </p>
-
       </div>
     </section>
-    <section id="section2" data-nav="Section 2">
+
+    <!--Sections 3 -->
+    <section id="Skills" data-nav="Skills">
       <div class="landing__container">
         <h2>Skills</h2>
         <p>
@@ -95,7 +82,6 @@
             <li>Solving technical problems</li>
           </ul>
         </p>
-
         <p>
           <strong class="liP">Personal Skills</strong>
           <ul class="lihi">
@@ -111,7 +97,9 @@
         </p>
       </div>
     </section>
-    <section id="section3" data-nav="Section 3">
+
+    <!--Sections 4 -->
+    <section id="Experience" data-nav="Experience">
       <div class="landing__container">
         <h2>Work Experience</h2>
         <p>
@@ -124,11 +112,11 @@
             <li>Customer Service Officer at (Americana groups) for 1 year.</li>
           </ul>
         </p>
-
-
       </div>
     </section>
-    <section id="section4" data-nav="Section 4">
+
+    <!--Sections 5 -->
+    <section id="Memberships" data-nav="Memberships">
       <div class="landing__container">
         <h2>Memberships & Achievements</h2>
         <p>
@@ -148,17 +136,15 @@
             <li>Volunteer in Cairo marathon 2018.</li>
             <li> Vice head IT (TEDx helwan university ) 2021 .</li>
           </ul>
-
         </p>
-
-
       </div>
     </section>
-    <section id="section5" data-nav="Section 5">
+
+    <!--Sections 6-->
+    <section id="Courses" data-nav="Courses">
       <div class="landing__container">
         <h2>Courses</h2>
         <p>
-
           <ul class="edLI">
             <li> Mean Stack Developer in (ITshare).</li>
             <li>Web development courses from Udemy.</li>
@@ -168,11 +154,13 @@
       </div>
     </section>
   </main>
+
+  <!--footer-->
   <footer class="page__footer">
     <p>Ahmed ibrahim 2021&#169; </p>
   </footer>
 
-
+  <!--import js files-->
   <script src="js/app.js"></script>
 
 </body>
