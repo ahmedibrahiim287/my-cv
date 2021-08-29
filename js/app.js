@@ -27,6 +27,7 @@ function navbarTogglerClick() {
    let sectionLink = section.getAttribute('id');
    let listItem = document.createElement('li');
    listItem.innerHTML =`<a class='menu__link' href='#${sectionLink}'>${sectionName}</a>`
+   
 
      listItem.addEventListener('click',navbarLinkClick)
      
@@ -75,13 +76,14 @@ function navbarLinkClick(event) {
 
 function sectionInViewPort(elm) {
   let setctionPos = elm.getBoundingClientRect();
-  return (setctionPos.top >= 0 && setctionPos.top<=400);
+  return (setctionPos.top >= -200 && setctionPos.top<=400);
 }
 function toggelClass(){
   for (let section of sections) {
+  section.classList.remove('your-nactive-class');
     if (sectionInViewPort(section)) {
       if (!section.classList.contains('your-active-class')) {
-        section.classList.add('your-active-class');
+        section.classList.add('your-nactive-class');
       } else {
         section.classList.remove('your-active-class');
       }
