@@ -74,7 +74,6 @@ section {
 
 .navbar__menu .menu__link {
     display: block;
-    padding: 1em;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
@@ -116,7 +115,7 @@ section {
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
-    /* padding: 1em; */
+    padding: 1em;
     text-align: left;
 }
 
@@ -269,7 +268,6 @@ section.your-nactive-class .landing__container::after {
     width: 69px;
     padding: 10px;
     position: relative;
-    top: 7px;
 }
 
 .navbar ul {
